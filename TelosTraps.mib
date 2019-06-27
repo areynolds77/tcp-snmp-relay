@@ -1,0 +1,101 @@
+TLS-LIVEWIRE-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+    OBJECT-TYPE, Integer32,
+    MODULE-IDENTITY                       FROM SNMPv2-SMI
+    TEXTUAL-CONVENTION, 
+    DisplayString, TruthValue             FROM SNMPv2-TC
+    livewire                              FROM TLS-SMI;
+
+tlsLivewireMIB MODULE-IDENTITY
+    LAST-UPDATED  "201404280000Z"
+    ORGANIZATION  "Telos Alliance"
+    CONTACT-INFO  "postal:   The Telos Alliance
+                             1241 Superior Avenue
+                             Cleveland, OH 44114
+                   email:    support@axiaaudio.com"
+    DESCRIPTION   "Livewire Audio over IP routing control
+                  and configuration."
+    REVISION      "201403310000Z"
+    DESCRIPTION   "Initial revision"
+    ::= { livewire 1 }
+
+tlsLivewireMIBObjects    OBJECT IDENTIFIER ::= { livewire 2 }
+tlsTraps                 OBJECT IDENTIFIER ::= { livewire 3}
+	notifications		 OBJECT IDENTIFIER ::= { tlsTraps 0 }
+
+----------------------------------
+-- Traps
+----------------------------------
+
+ALARM_01 NOTIFICATION-TYPE
+    OBJECTS { notificationObject }
+    STATUS current
+    DESCRIPTION
+        "Alarm 1 On"
+    ::= { notifications 1 }
+    
+ALARM_02 NOTIFICATION-TYPE
+    OBJECTS { notificationObject }
+    STATUS current
+    DESCRIPTION
+        "Alarm 1 Off"
+    ::= { notifications 2 }
+
+ALARM_03 NOTIFICATION-TYPE
+    OBJECTS { notificationObject }
+    STATUS current
+    DESCRIPTION
+        "Alarm 1 Off"
+    ::= { notifications 3 }
+
+ALARM_04 NOTIFICATION-TYPE
+    OBJECTS { notificationObject }
+    STATUS current
+    DESCRIPTION
+        "Alarm 1 Off"
+    ::= { notifications 4 }
+
+ALARM_05 NOTIFICATION-TYPE
+    OBJECTS { notificationObject }
+    STATUS current
+    DESCRIPTION
+        "Alarm 1 Off"
+    ::= { notifications 5 }
+
+ALARM_06 NOTIFICATION-TYPE
+    OBJECTS { notificationObject }
+    STATUS current
+    DESCRIPTION
+        "Alarm 1 Off"
+    ::= { notifications 6 }
+
+ALARM_07 NOTIFICATION-TYPE
+    OBJECTS { notificationObject }
+    STATUS current
+    DESCRIPTION
+        "Alarm 1 Off"
+    ::= { notifications 7 }
+
+ALARM_08 NOTIFICATION-TYPE
+    OBJECTS { notificationObject }
+    STATUS current
+    DESCRIPTION
+        "Alarm 1 Off"
+    ::= { notifications 8 }
+
+ALARM_09 NOTIFICATION-TYPE
+    OBJECTS { notificationObject }
+    STATUS current
+    DESCRIPTION
+        "Alarm 1 Off"
+    ::= { notifications 9 }
+
+ALARM_10 NOTIFICATION-TYPE
+    OBJECTS { notificationObject }
+    STATUS current
+    DESCRIPTION
+        "Alarm 1 Off"
+    ::= { notifications 10 }
+
+END
